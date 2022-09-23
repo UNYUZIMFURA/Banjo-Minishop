@@ -1,0 +1,1 @@
+# Starting Typescript after mastering Reactjs and Vanilla Javascript
