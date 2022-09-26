@@ -31,3 +31,10 @@
     border: 1px solid #4e6190;;
     background-color: #4e6190;
 }
+
+.todos {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    flex-wrap: wrap;
+}
