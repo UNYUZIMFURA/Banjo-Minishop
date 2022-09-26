@@ -1,7 +1,12 @@
 import React from "react";
+import './App.css'
+import InputField from "./components/InputField";
 
 const App: React.FC = () => {
-  return <div className="App">Hello Typescript</div>;
+  return <div className="App">
+    <span className="heading">Typescript Todo</span>
+    <InputField />
+  </div>;
 }
 
 export default App;

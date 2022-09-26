@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4e6190;
+    font-family: "Roboto"
+}
+
+.heading {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-top: 3rem;
+    z-index: 1;
+}
