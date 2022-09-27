@@ -10,8 +10,11 @@ const App: React.FC = () => {
   return (
     <div className="flex flex-col items-center h-screen w-screen border-[5px] border-[gray]">
       <NavBar />
-      <div className="flex justify-around flex-wrap h-[80vh] w-[90%] border-[1px] border-[blue]">
+      <div className="flex justify-around flex-wrap w-[90%] border-[1px] border-[blue] mt-[1rem]">
         <Product img={Piano}/>
+        <Product img={BMW}/>
+        <Product img={Mercedez}/>
+        <Product img={Macbook}/>
         <Product img={BMW}/>
         <Product img={Mercedez}/>
       </div>
