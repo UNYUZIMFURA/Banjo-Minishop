@@ -8,15 +8,15 @@ import Macbook from "./Images/macbook.jpg";
 
 const App: React.FC = () => {
   return (
-    <div className="flex flex-col items-center h-screen w-screen border-[5px] border-[gray]">
+    <div className="flex flex-col items-center h-screen w-screen">
       <NavBar />
-      <div className="flex justify-around flex-wrap w-[90%] border-[1px] border-[blue] mt-[1rem]">
-        <Product img={Piano} id="1"/>
-        <Product img={BMW} id="2"/>
-        <Product img={Mercedez} id="3"/>
-        <Product img={Macbook} id="4"/>
-        <Product img={BMW} id="5"/>
-        <Product img={Mercedez} id="6"/>
+      <div className="flex justify-around flex-wrap w-[90%] mt-[1rem]">
+        <Product img={Piano} id="1" />
+        <Product img={BMW} id="2" />
+        <Product img={Mercedez} id="3" />
+        <Product img={Macbook} id="4" />
+        <Product img={BMW} id="5" />
+        <Product img={Mercedez} id="6" />
       </div>
     </div>
   );
