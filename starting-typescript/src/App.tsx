@@ -4,7 +4,7 @@ import NavBar from "./Components/NavBar";
 import Piano from "./Images/piano.jpg"
 import BMW from './Images/bmw.jpg'
 import Mercedez from './Images/mercedez.jpg'
-import Mabook from './Images/macbook.jpg'
+import Maccbook from './Images/macbook.jpg'
 
 const App: React.FC = () => {
   return (
