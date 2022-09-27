@@ -12,6 +12,7 @@ const InputField: React.FC<Props> = ({ todo, setTodo, handleAdd }) => {
   return (
     <form className="input" onSubmit={handleAdd}>
       <input
+      value={todo}
         type="text"
         placeholder="Pend Tasks"
         className="input-box"
