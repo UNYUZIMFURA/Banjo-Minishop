@@ -8,7 +8,7 @@ return (
 <div className="h-1/2 w-full">
     <img src={img} className="object-cover h-full w-full" alt=""/>
 </div>
-<div className="h-1/2 w-full"></div>
+<div className="flex h-1/2 w-full"></div>
     </div>
 )
 }
