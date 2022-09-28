@@ -1,7 +1,7 @@
 import React from "react";
 import { BsCartPlusFill } from "react-icons/bs";
 
-const NavBar: React.FC = () => {
+const NavBar = () => {
   return (
     <div className="relative flex justify-center items-center h-[10vh] w-full">
       <h1 className="text-[2rem] font-medium">Typescript Cart</h1>

@@ -1,9 +1,5 @@
 import {IoCloseCircleOutline} from "react-icons/io5"
 
-interface Props {
-
-}
-
 const AddedTo = () => {
   return (
     <div className="flex justify-between items-center w-full h-[25vh] mt-[1rem] bg-[#E8E8E8]">
