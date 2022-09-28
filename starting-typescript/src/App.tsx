@@ -7,18 +7,13 @@ import Headphones from "./Images/headphones.jpg";
 import Volkswagen from "./Images/volkswagen.jpg";
 import Macbook from "./Images/macbook.jpg";
 import Mercedez from "./Images/mercedez.jpg";
-import { VscChromeClose } from "react-icons/vsc";
+import SideCart from "./Components/SideCart";
 
 const App: React.FC = () => {
   return (
-    <div className="flex flex-col items-center h-screen w-screen">
+    <div className="flex flex-col items-center h-[115vh] w-screen overflow-y-scroll">
       <NavBar />
-      <div className="flex flex-col items-center absolute right-0 h-screen w-[25%] border-[1px] border-[red]">
-        <div>
-          <h1>Inside Cart</h1>
-          <VscChromeClose />
-        </div>
-      </div>
+      <SideCart />
       <div className="flex justify-around flex-wrap w-[90%] mt-[3rem]">
         <Product img={Headphones} id="1" amt="120" productName="Headphones" />
         <Product img={Mitziig} id="2" amt="30" productName="Mitziig" />
