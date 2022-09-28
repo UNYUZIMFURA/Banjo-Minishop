@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import Product from "./Components/Product";
 import NavBar from "./Components/NavBar";
 import Piano from "./Images/piano.jpg";
@@ -8,9 +9,13 @@ import Volkswagen from "./Images/volkswagen.jpg";
 import Macbook from "./Images/macbook.jpg";
 import Mercedez from "./Images/mercedez.jpg";
 import SideCart from "./Components/SideCart";
+import StateContext from "./helpers/useContext";
 
 const App: React.FC = () => {
+const [openVal, setOpenVal] = useState("")
+
   return (
+    <StateContext.Provider value={{openVal, setOpenVal}}>
     <div className="flex flex-col items-center h-[115vh] w-screen overflow-y-scroll">
       <NavBar />
       <SideCart />
@@ -33,6 +38,7 @@ const App: React.FC = () => {
         <Product img={Piano} id="6" amt="5,000" productName="Piano" />
       </div>
     </div>
+    </StateContext.Provider>
   );
 };
 
