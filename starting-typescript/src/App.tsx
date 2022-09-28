@@ -2,21 +2,40 @@ import React from "react";
 import Product from "./Components/Product";
 import NavBar from "./Components/NavBar";
 import Piano from "./Images/piano.jpg";
-import BMW from "./Images/bmw.jpg";
-import Mercedez from "./Images/mercedez.jpg";
+import Mitziig from "./Images/mitziig.jpg";
+import Headphones from "./Images/headphones.jpg";
+import Volkswagen from "./Images/volkswagen.jpg";
 import Macbook from "./Images/macbook.jpg";
+import Mercedez from "./Images/mercedez.jpg";
+import { VscChromeClose } from "react-icons/vsc";
 
 const App: React.FC = () => {
   return (
     <div className="flex flex-col items-center h-screen w-screen">
       <NavBar />
-      <div className="flex justify-around flex-wrap w-[90%] mt-[1rem]">
-        <Product img={Piano} id="1" />
-        <Product img={BMW} id="2" />
-        <Product img={Mercedez} id="3" />
-        <Product img={Macbook} id="4" />
-        <Product img={BMW} id="5" />
-        <Product img={Mercedez} id="6" />
+      <div className="flex flex-col items-center absolute right-0 h-screen w-[25%] border-[1px] border-[red]">
+        <div>
+          <h1>Inside Cart</h1>
+          <VscChromeClose />
+        </div>
+      </div>
+      <div className="flex justify-around flex-wrap w-[90%] mt-[3rem]">
+        <Product img={Headphones} id="1" amt="120" productName="Headphones" />
+        <Product img={Mitziig} id="2" amt="30" productName="Mitziig" />
+        <Product
+          img={Volkswagen}
+          id="3"
+          amt="50,000"
+          productName="Volkswagen"
+        />
+        <Product img={Macbook} id="4" amt="1000" productName="Macbook" />
+        <Product
+          img={Mercedez}
+          id="5"
+          amt="45,000"
+          productName="Mercedez Benz"
+        />
+        <Product img={Piano} id="6" amt="5,000" productName="Piano" />
       </div>
     </div>
   );
