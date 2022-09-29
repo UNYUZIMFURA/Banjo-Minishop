@@ -12,7 +12,7 @@ import SideCart from "./Components/SideCart";
 import StateContext from "./helpers/useContext";
 
 const App: React.FC = () => {
-const [openVal, setOpenVal] = useState("")
+const [openVal, setOpenVal] = useState<boolean>(false)
 
   return (
     <StateContext.Provider value={{openVal, setOpenVal}}>
