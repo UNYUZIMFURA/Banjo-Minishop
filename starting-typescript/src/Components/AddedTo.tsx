@@ -7,7 +7,7 @@ const AddedTo = () => {
         <div className="h-[70%]">{/* <img src={} /> */}</div>
         <div className="flex w-full justify-around">
           <h1>Book</h1>
-          <h1>Book</h1>
+          <h1>$50</h1>
         </div>
       </div>
       <div className="h-1/2 w-[30%] flex flex-col justify-around">

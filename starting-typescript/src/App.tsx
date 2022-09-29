@@ -14,6 +14,14 @@ import StateContext from "./helpers/useContext";
 const App: React.FC = () => {
 const [openVal, setOpenVal] = useState<boolean>(false)
 
+interface Product {
+name: string
+amt: number
+img: string
+}
+
+const [productsArr, setProductsArr] = useState<string[]>([])
+
   return (
     <StateContext.Provider value={{openVal, setOpenVal}}>
     <div className="flex flex-col items-center h-[115vh] w-screen overflow-y-scroll">
