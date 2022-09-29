@@ -1,6 +1,9 @@
 import {IoCloseCircleOutline} from "react-icons/io5"
+import { useContext } from "react";
+import StateContext from "../helpers/useContext";
 
 const AddedTo = () => {
+  const {productsArr, setProductsArr} = useContext(StateContext) as any
   return (
     <div className="flex justify-between items-center w-full h-[25vh] mt-[1rem] bg-[#E8E8E8]">
       <div className="h-full w-[55%] flex flex-col justify-evenly">

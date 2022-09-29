@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { VscChromeClose } from "react-icons/vsc";
 import AddedTo from "./AddedTo";
 import StateContext from "../helpers/useContext";
