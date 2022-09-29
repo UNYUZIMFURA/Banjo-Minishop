@@ -5,23 +5,30 @@ import StateContext from "../helpers/useContext";
 
 const SideCart: React.FC = (): any => {
   const { openVal, setOpenVal } = useContext(StateContext) as any;
-  console.log(openVal);
+
   return openVal ? (
-    <div className="flex-col justify-between items-center absolute right-0 overflow-y-scroll h-screen w-[31%] border-[1px] border-[red]">
-      <div className="flex items-center h-[10vh] flex justify-around w-full">
-        <h1 className="text-[1.3rem]">Inside Cart</h1>
-        <div>
-          <VscChromeClose size={28} />
+    <div className="absolute w-full h-full bg-[rgba(0,0,0,0.5)] ">
+      <div className="bg-[white] flex-col justify-between items-center absolute right-0 overflow-y-scroll h-screen w-[31%]">
+        <div className="flex items-center h-[10vh] flex justify-around w-full">
+          <h1 className="text-[1.3rem]">Inside Cart</h1>
+          <div
+            onClick={() => {
+              setOpenVal(false);
+            }}
+            className="cursor-pointer"
+          >
+            <VscChromeClose size={28} />
+          </div>
         </div>
+        <AddedTo />
+        <AddedTo />
+        <AddedTo />
+        <AddedTo />
+        <AddedTo />
+        <AddedTo />
+        <AddedTo />
+        <AddedTo />
       </div>
-      <AddedTo />
-      <AddedTo />
-      <AddedTo />
-      <AddedTo />
-      <AddedTo />
-      <AddedTo />
-      <AddedTo />
-      <AddedTo />
     </div>
   ) : (
     <></>
