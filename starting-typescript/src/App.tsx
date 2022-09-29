@@ -18,6 +18,8 @@ interface Product {
 name: string
 amt: number
 img: string
+quantity: number
+total: number
 }
 
 
