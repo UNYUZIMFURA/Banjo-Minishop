@@ -9,7 +9,7 @@ const AddedTo = () => {
       <div className="h-full w-[55%] flex flex-col justify-evenly">
         <div className="h-[70%]">{/* <img src={} /> */}</div>
         <div className="flex w-full justify-around">
-          <h1>Book</h1>
+          <h1>{productsArr.name}</h1>
           <h1>$50</h1>
         </div>
       </div>

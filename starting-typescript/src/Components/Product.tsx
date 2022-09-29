@@ -9,8 +9,7 @@ interface Props {
 }
 
 const Product: React.FC<Props> = ({ img, amt, productName }) => {
-  const {productsArr, setProductsArr} = useContext(StateContext) as any
-
+  const { productsArr, setProductsArr } = useContext(StateContext) as any;
 
   return (
     <div className="h-[50vh] w-[28%] flex flex-col mt-[1rem]">
@@ -26,7 +25,14 @@ const Product: React.FC<Props> = ({ img, amt, productName }) => {
           <h1 className="text-[1.1rem]">{productName}</h1>
           <h1 className="text-[1.1rem] text-[#737373]">${amt}</h1>
         </div>
-        <button className="bg-[blue] text-[#fff] rounded-[3px] h-[3.3rem] w-[80%] cursor-pointer outline-none" onClick={() => setProductsArr}>
+        <button
+          className="bg-[blue] text-[#fff] rounded-[3px] h-[3.3rem] w-[80%] cursor-pointer outline-none"
+          onClick={prevProduct => [...productsArr, {
+            img,
+            amt, 
+            productName
+          }]}
+        >
           Add To Cart
         </button>
       </div>
