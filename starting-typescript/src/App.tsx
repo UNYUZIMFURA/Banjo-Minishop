@@ -20,6 +20,8 @@ amt: number
 img: string
 }
 
+
+
 const [productsArr, setProductsArr] = useState<string[]>([])
 
   return (
