@@ -3,7 +3,7 @@ import StateContext from "../helpers/useContext";
 
 interface Props {
   img: string;
-  amt: string;
+  amt: number
   name: string;
 }
 
