@@ -23,6 +23,7 @@ const SideCart: React.FC = (): any => {
           </div>
         </div>
         {productsArr.map((singleProduct:any) => {
+          {console.log(singleProduct.amt, singleProduct.name)}
           <AddedTo productAmt={singleProduct.amt} productName={singleProduct.name}/>;
         })}
       </div>

@@ -5,10 +5,10 @@ interface Props {
   id: string;
   img: string;
   amt: string;
-  productName: string;
+  name: string;
 }
 
-const Product: React.FC<Props> = ({ img, amt, productName }) => {
+const Product: React.FC<Props> = ({ img, amt, name }) => {
   const { productsArr, setProductsArr } = useContext(StateContext) as any;
 
   return (
@@ -22,7 +22,7 @@ const Product: React.FC<Props> = ({ img, amt, productName }) => {
       </div>
       <div className="flex flex-col justify-around h-1/2 items-center w-full">
         <div className="w-full justify-around flex justify-around">
-          <h1 className="text-[1.1rem]">{productName}</h1>
+          <h1 className="text-[1.1rem]">{name}</h1>
           <h1 className="text-[1.1rem] text-[#737373]">${amt}</h1>
         </div>
         <button
@@ -31,7 +31,7 @@ const Product: React.FC<Props> = ({ img, amt, productName }) => {
             setProductsArr([...productsArr, {
               img,
               amt,
-              productName
+              name
             }])
           }
         >
