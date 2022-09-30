@@ -31,7 +31,7 @@ const AddedTo: React.FC<Props> = ({
       </div>
       <div className="h-1/2 w-[30%] flex flex-col justify-around">
         <h1 className="">Quantity: {quantity}</h1>
-        <h2 className="">Total: $30 </h2>
+        <h2 className="">Total: {productAmt * quantity} </h2>
       </div>
       <div className="h-full w-[10%] flex flex-col cursor-pointer items-center justify-center">
         <IoCloseCircleOutline size={35} />
