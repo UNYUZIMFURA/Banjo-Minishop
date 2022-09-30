@@ -9,7 +9,7 @@ interface Props {
   quantity: number;
 }
 
-const Product: React.FC<Props> = ({ img, amt, name }) => {
+const Product: React.FC<Props> = ({ img, amt, name, quantity }) => {
   const [productClick, setProductClick] = useState<number>(0);
   const { productsArr, setProductsArr } = useContext(StateContext) as any;
 
@@ -28,6 +28,7 @@ const Product: React.FC<Props> = ({ img, amt, name }) => {
         img,
         amt,
         name,
+        quantity
       },
     ]);
   };
