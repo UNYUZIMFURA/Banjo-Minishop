@@ -10,9 +10,11 @@ interface Props {
 const Product: React.FC<Props> = ({ img, amt, name }) => {
   const [productClick, setProductClick] = useState<number>(0);
   const { productsArr, setProductsArr } = useContext(StateContext) as any;
-
+console.log(productsArr)
   if (productClick > 1) {
-   productsArr.map()
+   productsArr.map((changeProduct:any) => {
+    changeProduct.amt
+   })
   }
 
   const doubleCall = () => {
