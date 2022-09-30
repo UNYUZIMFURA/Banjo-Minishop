@@ -7,7 +7,7 @@ interface Props {
   productAmt: number
 }
 
-const AddedTo:React.FC<Props> = () => {
+const AddedTo:React.FC<Props> = ({productAmt, productName}) => {
   const {productsArr, setProductsArr} = useContext(StateContext) as any
   console.log(productsArr)
   return (
@@ -15,8 +15,8 @@ const AddedTo:React.FC<Props> = () => {
       <div className="h-full w-[55%] flex flex-col justify-evenly">
         <div className="h-[70%]">{/* <img src={} /> */}</div>
         <div className="flex w-full justify-around">
-          <h1></h1>
-          <h1>$50</h1>
+          <h1>{productName}</h1>
+          <h1>{productAmt}</h1>
         </div>
       </div>
       <div className="h-1/2 w-[30%] flex flex-col justify-around">
