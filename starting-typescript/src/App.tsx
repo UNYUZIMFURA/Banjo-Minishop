@@ -24,7 +24,6 @@ const App: React.FC = () => {
 
   const products: Product[] = [];
   const [productsArr, setProductsArr] = useState(products);
-
   return (
     <StateContext.Provider
       value={{ openVal, setOpenVal, productsArr, setProductsArr }}

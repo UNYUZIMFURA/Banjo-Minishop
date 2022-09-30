@@ -5,6 +5,7 @@ import StateContext from "../helpers/useContext";
 
 const SideCart: React.FC = (): any => {
   const { openVal, setOpenVal } = useContext(StateContext) as any;
+  const { productsArr, setProductsArr } = useContext(StateContext) as any;
 
   return openVal ? (
     <div className="absolute w-full h-full bg-[rgba(0,0,0,0.5)] ">
@@ -20,14 +21,9 @@ const SideCart: React.FC = (): any => {
             <VscChromeClose size={28} />
           </div>
         </div>
-        <AddedTo />
-        <AddedTo />
-        <AddedTo />
-        <AddedTo />
-        <AddedTo />
-        <AddedTo />
-        <AddedTo />
-        <AddedTo />
+        {productsArr.map((singleProduct) => {
+          <AddedTo />;
+        })}
       </div>
     </div>
   ) : (
