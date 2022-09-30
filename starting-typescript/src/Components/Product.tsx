@@ -3,22 +3,32 @@ import StateContext from "../helpers/useContext";
 
 interface Props {
   img: string;
-  amt: number
+  amt: number;
   name: string;
 }
 
 const Product: React.FC<Props> = ({ img, amt, name }) => {
-   const [productClick, setProductClick] = useState<number>(0)
+  const [productClick, setProductClick] = useState<number>(0);
   const { productsArr, setProductsArr } = useContext(StateContext) as any;
-  const doubleCall = () => {
-    setProductClick(prevClicks => prevClicks + 1)
-    setProductsArr([...productsArr, {
-      img,
-      amt,
-      name
-    }])
+
+  if (productClick > 1) {
+    console.log(productClick);
+    console.log("Greater");
   }
-  
+
+  const doubleCall = () => {
+    setProductClick((prevClicks) => prevClicks + 1);
+
+    setProductsArr([
+      ...productsArr,
+      {
+        img,
+        amt,
+        name,
+      },
+    ]);
+  };
+
   return (
     <div className="h-[50vh] w-[28%] flex flex-col mt-[1rem]">
       <div className="h-[60%] w-full">
