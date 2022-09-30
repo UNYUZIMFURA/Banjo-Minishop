@@ -9,7 +9,6 @@ interface Props {
 
 const AddedTo:React.FC<Props> = ({productAmt, productName}) => {
   const {productsArr, setProductsArr} = useContext(StateContext) as any
-  console.log(productsArr)
   return (
     <div className="flex justify-between items-center w-full h-[25vh] mt-[1rem] bg-[#E8E8E8]">
       <div className="h-full w-[55%] flex flex-col justify-evenly">
