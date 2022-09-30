@@ -27,11 +27,13 @@ const Product: React.FC<Props> = ({ img, amt, productName }) => {
         </div>
         <button
           className="bg-[blue] text-[#fff] rounded-[3px] h-[3.3rem] w-[80%] cursor-pointer outline-none"
-          onClick={prevProduct => [...productsArr, {
-            img,
-            amt, 
-            productName
-          }]}
+          onClick={() =>
+            setProductsArr([...productsArr, {
+              img,
+              amt,
+              productName
+            }])
+          }
         >
           Add To Cart
         </button>
