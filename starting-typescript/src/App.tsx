@@ -11,16 +11,17 @@ import Mercedez from "./Images/mercedez.jpg";
 import SideCart from "./Components/SideCart";
 import StateContext from "./helpers/useContext";
 
+export interface Product {
+  name: string;
+  amt: number;
+  img: string;
+  quantity: number;
+  total: number;
+}
+
 const App: React.FC = () => {
   const [openVal, setOpenVal] = useState<boolean>(false);
 
-  interface Product {
-    name: string;
-    amt: number;
-    img: string;
-    quantity: number;
-    total: number;
-  }
 
   const products: Product[] = [];
   const [productsArr, setProductsArr] = useState(products);

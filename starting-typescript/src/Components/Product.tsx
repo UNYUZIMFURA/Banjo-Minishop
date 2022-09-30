@@ -1,32 +1,33 @@
 import { useContext, useState } from "react";
 import StateContext from "../helpers/useContext";
+import { Product as ProductInterface } from "./../App";
 
 interface Props {
   img: string;
   amt: number;
   name: string;
-  quantity: number
+  quantity: number;
 }
 
 const Product: React.FC<Props> = ({ img, amt, name }) => {
   const [productClick, setProductClick] = useState<number>(0);
   const { productsArr, setProductsArr } = useContext(StateContext) as any;
-console.log(productsArr)
+
   if (productClick > 1) {
-   productsArr.map((changeProduct:any) => {
-    changeProduct.quantity = productClick
-   })
+    productsArr.map((changeProduct: any) => {
+      return (changeProduct.quantity = productClick);
+    });
   }
 
   const doubleCall = () => {
     setProductClick((prevClicks) => prevClicks + 1);
+    if (productsArr.find((el: ProductInterface) => el.name === name)) return;
     setProductsArr([
       ...productsArr,
       {
         img,
         amt,
         name,
-
       },
     ]);
   };

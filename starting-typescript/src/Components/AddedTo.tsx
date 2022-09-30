@@ -25,7 +25,7 @@ const AddedTo: React.FC<Props> = ({ productAmt, productName, img, quantity }) =>
         <h1 className="">Quantity: {quantity}</h1>
         <h2 className="">Total: $30 </h2>
       </div>
-      <div className="h-full w-[10%] flex flex-col items-center justify-center">
+      <div className="h-full w-[10%] flex flex-col cursor-pointer items-center justify-center">
         <IoCloseCircleOutline size={35} />
       </div>
     </div>
