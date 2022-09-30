@@ -28,7 +28,7 @@ const Product: React.FC<Props> = ({ img, amt, name, quantity }) => {
         img,
         amt,
         name,
-        quantity
+        quantity,
       },
     ]);
   };
