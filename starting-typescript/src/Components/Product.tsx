@@ -12,13 +12,11 @@ const Product: React.FC<Props> = ({ img, amt, name }) => {
   const { productsArr, setProductsArr } = useContext(StateContext) as any;
 
   if (productClick > 1) {
-    console.log(productClick);
-    console.log("Greater");
+   productsArr.map()
   }
 
   const doubleCall = () => {
     setProductClick((prevClicks) => prevClicks + 1);
-
     setProductsArr([
       ...productsArr,
       {
