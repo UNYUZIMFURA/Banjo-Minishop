@@ -3,16 +3,18 @@ import { useContext } from "react";
 import StateContext from "../helpers/useContext";
 
 interface Props {
+  img: string;
   productName: string;
   productAmt: number;
 }
 
-const AddedTo: React.FC<Props> = ({ productAmt, productName }) => {
-  const { productsArr, setProductsArr } = useContext(StateContext) as any;
+const AddedTo: React.FC<Props> = ({ productAmt, productName, img }) => {
   return (
     <div className="flex justify-between items-center w-full h-[25vh] mt-[1rem] bg-[#E8E8E8]">
       <div className="h-full w-[55%] flex flex-col justify-evenly">
-        <div className="h-[70%]">{/* <img src={} /> */}</div>
+        <div className="h-[70%]">
+          <img src={img} alt="" className="object-cover h-full w-full"/>
+        </div>
         <div className="flex w-full justify-around">
           <h1>{productName}</h1>
           <h1>{productAmt}</h1>

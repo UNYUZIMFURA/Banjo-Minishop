@@ -15,7 +15,6 @@ const App: React.FC = () => {
   const [openVal, setOpenVal] = useState<boolean>(false);
 
   interface Product {
-    id: number;
     name: string;
     amt: number;
     img: string;
@@ -33,12 +32,12 @@ const App: React.FC = () => {
         <NavBar />
         <SideCart />
         <div className="flex justify-around flex-wrap w-[90%] mt-[3rem]">
-          <Product img={Headphones} id="1" amt="120" name="Headphones" />
-          <Product img={Mitziig} id="2" amt="30" name="Mitziig" />
-          <Product img={Volkswagen} id="3" amt="50,000" name="Volkswagen" />
-          <Product img={Macbook} id="4" amt="1000" name="Macbook" />
-          <Product img={Mercedez} id="5" amt="45,000" name="Mercedez Benz" />
-          <Product img={Piano} id="6" amt="5,000" name="Piano" />
+          <Product img={Headphones} amt="120" name="Headphones" />
+          <Product img={Mitziig} amt="30" name="Mitziig" />
+          <Product img={Volkswagen} amt="50,000" name="Volkswagen" />
+          <Product img={Macbook} amt="1000" name="Macbook" />
+          <Product img={Mercedez} amt="45,000" name="Mercedez Benz" />
+          <Product img={Piano} amt="5,000" name="Piano" />
         </div>
       </div>
     </StateContext.Provider>

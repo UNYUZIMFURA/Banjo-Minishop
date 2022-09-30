@@ -2,7 +2,6 @@ import { useContext } from "react";
 import StateContext from "../helpers/useContext";
 
 interface Props {
-  id: string;
   img: string;
   amt: string;
   name: string;
