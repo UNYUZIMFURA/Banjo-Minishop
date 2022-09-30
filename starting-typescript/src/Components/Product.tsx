@@ -5,6 +5,7 @@ interface Props {
   img: string;
   amt: number;
   name: string;
+  quantity: number
 }
 
 const Product: React.FC<Props> = ({ img, amt, name }) => {
@@ -13,7 +14,7 @@ const Product: React.FC<Props> = ({ img, amt, name }) => {
 console.log(productsArr)
   if (productClick > 1) {
    productsArr.map((changeProduct:any) => {
-    changeProduct.amt
+    changeProduct.quantity = productClick
    })
   }
 
@@ -25,6 +26,7 @@ console.log(productsArr)
         img,
         amt,
         name,
+
       },
     ]);
   };

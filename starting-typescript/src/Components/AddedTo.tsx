@@ -6,9 +6,10 @@ interface Props {
   img: string;
   productName: string;
   productAmt: number;
+  quantity: number
 }
 
-const AddedTo: React.FC<Props> = ({ productAmt, productName, img }) => {
+const AddedTo: React.FC<Props> = ({ productAmt, productName, img, quantity }) => {
   return (
     <div className="flex justify-between items-center w-full h-[25vh] mt-[1rem] bg-[#E8E8E8]">
       <div className="h-full w-[55%] flex flex-col justify-evenly">
@@ -21,7 +22,7 @@ const AddedTo: React.FC<Props> = ({ productAmt, productName, img }) => {
         </div>
       </div>
       <div className="h-1/2 w-[30%] flex flex-col justify-around">
-        <h1 className="">Quantity: 2</h1>
+        <h1 className="">Quantity: {quantity}</h1>
         <h2 className="">Total: $30 </h2>
       </div>
       <div className="h-full w-[10%] flex flex-col items-center justify-center">

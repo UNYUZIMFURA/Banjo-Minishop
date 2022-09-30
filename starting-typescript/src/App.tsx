@@ -32,12 +32,12 @@ const App: React.FC = () => {
         <NavBar />
         <SideCart />
         <div className="flex justify-around flex-wrap w-[90%] mt-[3rem]">
-          <Product img={Headphones} amt={120} name="Headphones" />
-          <Product img={Mitziig} amt={30} name="Mitziig" />
-          <Product img={Volkswagen} amt={7000} name="Volkswagen" />
-          <Product img={Macbook} amt={1000} name="Macbook" />
-          <Product img={Mercedez} amt={45000} name="Mercedez Benz" />
-          <Product img={Piano} amt={3000} name="Piano" />
+          <Product img={Headphones} amt={120} name="Headphones" quantity={1}/>
+          <Product img={Mitziig} amt={30} name="Mitziig" quantity={1} />
+          <Product img={Volkswagen} amt={7000} name="Volkswagen" quantity={1} />
+          <Product img={Macbook} amt={1000} name="Macbook" quantity={1} />
+          <Product img={Mercedez} amt={45000} name="Mercedez Benz" quantity={1} />
+          <Product img={Piano} amt={3000} name="Piano" quantity={1} />
         </div>
       </div>
     </StateContext.Provider>
