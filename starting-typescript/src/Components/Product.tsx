@@ -11,13 +11,6 @@ export interface Props {
 }
 
 const Product: React.FC<Props> = ({ img, amt, name, quantity, addProduct }) => {
-  const [productClick, setProductClick] = useState<number>(0);
-  const { productsArr, setProductsArr } = useContext(StateContext) as any;
-
-  const doubleCall = () => {
-    // setProductClick((prevClicks) => prevClicks + 1);
-  };
-
   return (
     <div className="h-[50vh] w-[28%] flex flex-col mt-[1rem]">
       <div className="h-[60%] w-full">
