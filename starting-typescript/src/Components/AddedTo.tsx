@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import StateContext from "../helpers/useContext";
 import { IoCloseCircleOutline } from "react-icons/io5";
 
@@ -16,7 +16,6 @@ const AddedTo: React.FC<Props> = ({
   quantity,
 }) => {
   const { productsArr } = useContext(StateContext) as any;
-
   const incrementProduct = () => {
     productsArr.map((prod: any) => {
       if (prod.name === productName) {
