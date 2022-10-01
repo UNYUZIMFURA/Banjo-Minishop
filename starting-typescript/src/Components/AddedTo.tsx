@@ -21,7 +21,6 @@ const AddedTo: React.FC<Props> = ({
       if (prod.name === productName) {
         prod.quantity += 1;
       }
-      console.log(prod.quantity);
     });
   };
 
