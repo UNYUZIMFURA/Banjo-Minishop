@@ -58,7 +58,7 @@ const App: React.FC = () => {
             addProduct={addProduct}
             img={Mitziig}
             amt={30}
-            name="Mitziig"
+            name="Mütziig"
             quantity={1}
           />
           <Product

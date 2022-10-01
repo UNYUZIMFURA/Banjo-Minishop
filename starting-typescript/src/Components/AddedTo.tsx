@@ -28,11 +28,7 @@ const AddedTo: React.FC<Props> = ({
   };
 
   const decrementProduct = () => {
-    if (quantity < 0) {
-      console.log(quantity)
-      return;
-    }
-
+    if (quantity < 1) return;
     setProductsArr(
       productsArr.map((prod: any) => {
         if (prod.name === productName) {
