@@ -16,7 +16,7 @@ export interface Product {
   amt: number;
   img: string;
   quantity: number;
-  total: number;
+  total?: number;
 }
 
 const App: React.FC = () => {
