@@ -1,5 +1,3 @@
-import { useContext, useState } from "react";
-import StateContext from "../helpers/useContext";
 import { Product as ProductInterface } from "./../App";
 
 export interface Props {

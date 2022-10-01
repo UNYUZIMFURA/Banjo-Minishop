@@ -6,6 +6,7 @@ import StateContext from "../helpers/useContext";
 const SideCart: React.FC = (): any => {
   const { openVal, setOpenVal } = useContext(StateContext) as any;
   const { productsArr } = useContext(StateContext) as any;
+  console.log(productsArr)
 
   return openVal ? (
     <div className="absolute w-full h-[115vh] bg-[rgba(0,0,0,0.5)] ">

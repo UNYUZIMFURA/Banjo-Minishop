@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import StateContext from "../helpers/useContext";
 import { IoCloseCircleOutline } from "react-icons/io5";
 
 interface Props {
@@ -13,6 +15,23 @@ const AddedTo: React.FC<Props> = ({
   img,
   quantity,
 }) => {
+
+const { productArr } = useContext(StateContext) as any
+
+console.log(productArr)
+
+const incrementProduct = () => {
+productArr.map((prod:any) => {
+if(prod.name === productName) console.log("Do something")
+})
+}
+
+// const decrementProduct = () => {
+//   productArr.map((prod:any) => {
+
+//   })
+// }
+
   return (
     <div className="flex justify-between items-center w-full h-[25vh] mt-[1rem] bg-[#E8E8E8]">
       <div className="h-full w-[55%] flex flex-col justify-evenly">
@@ -32,7 +51,7 @@ const AddedTo: React.FC<Props> = ({
         <div className="h-1/2 w-1/2 flex items-center justify-around bg-[blue]">
           <button className="rounded-full h-1/2 w-[2rem] bg-[white]">-</button>
           <h1 className="">{quantity}</h1>
-          <button className="rounded-full h-1/2 w-[2rem] bg-[white]">+</button>
+          <button className="rounded-full h-1/2 w-[2rem] bg-[white]" onClick={incrementProduct}>+</button>
         </div>
         <h2 className="">Total: {productAmt * quantity} </h2>
       </div>
