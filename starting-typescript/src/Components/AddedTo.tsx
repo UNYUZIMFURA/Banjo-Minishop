@@ -34,6 +34,10 @@ const AddedTo: React.FC<Props> = ({
     });
   };
 
+  const removeProduct = () => {
+    productsArr.filter((el: any) => el.name === productName);
+  };
+
   return (
     <div className="flex justify-between items-center w-full h-[25vh] mt-[1rem] bg-[#E8E8E8]">
       <div className="h-full w-[55%] flex flex-col justify-evenly">
@@ -67,7 +71,10 @@ const AddedTo: React.FC<Props> = ({
         </div>
         <h2 className="">Total: {productAmt * quantity} </h2>
       </div>
-      <div className="bg-[brown] h-full flex flex-col cursor-pointer items-center justify-center">
+      <div
+        className="bg-[brown] h-full flex flex-col cursor-pointer items-center justify-center"
+        onClick={removeProduct}
+      >
         <IoCloseCircleOutline size={35} />
       </div>
     </div>
