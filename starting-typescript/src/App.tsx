@@ -23,6 +23,7 @@ const App: React.FC = () => {
   const [openVal, setOpenVal] = useState<boolean>(false);
   const products: Product[] = [];
   const [productsArr, setProductsArr] = useState(products);
+  const [totalMoney, setTotalMoney] = useState<number>(0)
 
   const addProduct = (data: Product) => {
     setProductsArr((prev: Product[]) => {
@@ -41,7 +42,7 @@ const App: React.FC = () => {
 
   return (
     <StateContext.Provider
-      value={{ openVal, setOpenVal, productsArr, setProductsArr }}
+      value={{ openVal, setOpenVal, productsArr, setProductsArr, totalMoney, setTotalMoney }}
     >
       <div className="flex flex-col items-center h-[115vh] w-screen overflow-y-scroll">
         <NavBar />

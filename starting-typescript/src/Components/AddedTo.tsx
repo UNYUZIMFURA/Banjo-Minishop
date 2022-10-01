@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import StateContext from "../helpers/useContext";
 import { IoCloseCircleOutline } from "react-icons/io5";
 
@@ -15,7 +15,9 @@ const AddedTo: React.FC<Props> = ({
   img,
   quantity,
 }) => {
+  const { totalMoney, setTotalMoney } = useContext(StateContext) as any;
   const { productsArr, setProductsArr } = useContext(StateContext) as any;
+  console.log(totalMoney)
   const incrementProduct = () => {
     setProductsArr(
       productsArr.map((prod: any) => {
@@ -25,6 +27,7 @@ const AddedTo: React.FC<Props> = ({
         return prod;
       })
     );
+    setTotalMoney((prevMoney: number) => (prevMoney += productAmt * quantity));
   };
 
   const decrementProduct = () => {
@@ -37,6 +40,7 @@ const AddedTo: React.FC<Props> = ({
         return prod;
       })
     );
+    setTotalMoney((prevMoney: number) => (prevMoney -= productAmt * quantity));
   };
 
   const removeProduct = () => {
