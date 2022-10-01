@@ -28,11 +28,13 @@ const AddedTo: React.FC<Props> = ({
           <h1>{productAmt}</h1>
         </div>
       </div>
-      <div className="bg-[red] h-1/2 w-[40%] flex flex-col justify-around">
-        <div className="h-1/2 flex items-center justify-center bg-[blue]"></div>
-        
-        {/* <h1 className="">Quantity: {quantity}</h1>
-        <h2 className="">Total: {productAmt * quantity} </h2> */}
+      <div className="bg-[red] h-1/2 w-[40%] flex flex-col items-center justify-around">
+        <div className="h-1/2 w-1/2 flex items-center justify-around bg-[blue]">
+          <button className="rounded-full h-1/2 w-[2rem] bg-[white]">-</button>
+          <h1 className="">{quantity}</h1>
+          <button className="rounded-full h-1/2 w-[2rem] bg-[white]">+</button>
+        </div>
+        <h2 className="">Total: {productAmt * quantity} </h2>
       </div>
       <div className="bg-[brown] h-full flex flex-col cursor-pointer items-center justify-center">
         <IoCloseCircleOutline size={35} />
