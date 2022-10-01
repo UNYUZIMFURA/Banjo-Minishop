@@ -22,6 +22,8 @@ const SideCart: React.FC = (): any => {
           </div>
         </div>
         {productsArr.map((singleProduct: any) => {
+          console.log(singleProduct);
+          
           return (
             <AddedTo
               quantity={singleProduct.quantity}

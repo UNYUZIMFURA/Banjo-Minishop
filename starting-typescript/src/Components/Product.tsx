@@ -2,35 +2,20 @@ import { useContext, useState } from "react";
 import StateContext from "../helpers/useContext";
 import { Product as ProductInterface } from "./../App";
 
-interface Props {
+export interface Props {
   img: string;
   amt: number;
   name: string;
   quantity: number;
+  addProduct: (o: ProductInterface) => void;
 }
 
-const Product: React.FC<Props> = ({ img, amt, name, quantity }) => {
+const Product: React.FC<Props> = ({ img, amt, name, quantity, addProduct }) => {
   const [productClick, setProductClick] = useState<number>(0);
   const { productsArr, setProductsArr } = useContext(StateContext) as any;
 
-  if (productClick > 1) {
-    productsArr.map((changeProduct: any) => {
-      return (changeProduct.quantity = productClick);
-    });
-  }
-
   const doubleCall = () => {
-    setProductClick((prevClicks) => prevClicks + 1);
-    if (productsArr.find((el: ProductInterface) => el.name === name)) return;
-    setProductsArr([
-      ...productsArr,
-      {
-        img,
-        amt,
-        name,
-        quantity,
-      },
-    ]);
+    // setProductClick((prevClicks) => prevClicks + 1);
   };
 
   return (
@@ -49,7 +34,7 @@ const Product: React.FC<Props> = ({ img, amt, name, quantity }) => {
         </div>
         <button
           className="bg-[blue] text-[#fff] rounded-[3px] h-[3.3rem] w-[80%] cursor-pointer outline-none"
-          onClick={() => doubleCall()}
+          onClick={() => addProduct({ img, amt, name, quantity })}
         >
           Add To Cart
         </button>

@@ -16,13 +16,30 @@ export interface Product {
   amt: number;
   img: string;
   quantity: number;
-  total: number;
+  total?: number;
 }
 
 const App: React.FC = () => {
   const [openVal, setOpenVal] = useState<boolean>(false);
   const products: Product[] = [];
   const [productsArr, setProductsArr] = useState(products);
+
+  const addProduct = (data: Product) => {
+    setProductsArr((prev: Product[]) => {
+      console.count(`prod-${data.name}`);
+      const alreadySelected = !!productsArr.find(
+        (el: Product) => el.name === data.name
+      );
+      if (alreadySelected) {
+        return productsArr.map((prod: Product) => {
+          if (prod.name === data.name) prod.quantity += 1;
+          return prod;
+        });
+      }
+      return [...prev, {...data}];
+    });
+  };
+  
   return (
     <StateContext.Provider
       value={{ openVal, setOpenVal, productsArr, setProductsArr }}
@@ -31,17 +48,17 @@ const App: React.FC = () => {
         <NavBar />
         <SideCart />
         <div className="flex justify-around flex-wrap w-[90%] mt-[3rem]">
-          <Product img={Headphones} amt={120} name="Headphones" quantity={1} />
-          <Product img={Mitziig} amt={30} name="Mitziig" quantity={1} />
-          <Product img={Volkswagen} amt={7000} name="Volkswagen" quantity={1} />
-          <Product img={Macbook} amt={1000} name="Macbook" quantity={1} />
-          <Product
+          <Product addProduct={addProduct} img={Headphones} amt={120} name="Headphones" quantity={1} />
+          <Product addProduct={addProduct} img={Mitziig} amt={30} name="Mitziig" quantity={1} />
+          <Product addProduct={addProduct} img={Volkswagen} amt={7000} name="Volkswagen" quantity={1} />
+          <Product addProduct={addProduct} img={Macbook} amt={1000} name="Macbook" quantity={1} />
+          <Product addProduct={addProduct}
             img={Mercedez}
             amt={45000}
             name="Mercedez Benz"
             quantity={1}
           />
-          <Product img={Piano} amt={3000} name="Piano" quantity={1} />
+          <Product addProduct={addProduct} img={Piano} amt={3000} name="Piano" quantity={1} />
         </div>
       </div>
     </StateContext.Provider>
