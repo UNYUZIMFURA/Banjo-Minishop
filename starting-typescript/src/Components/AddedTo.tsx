@@ -34,7 +34,6 @@ const AddedTo: React.FC<Props> = ({
   };
 
   const removeProduct = () => {
-    console.log("Ikise");
     return setProductsArr(
       productsArr.filter((el: any) => el.name !== productName)
     );
