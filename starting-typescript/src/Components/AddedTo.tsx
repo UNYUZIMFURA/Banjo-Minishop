@@ -17,20 +17,19 @@ const AddedTo: React.FC<Props> = ({
 }) => {
   const { productsArr, setProductsArr } = useContext(StateContext) as any;
   const incrementProduct = () => {
-    productsArr.map((prod: any) => {
+   setProductsArr(productsArr.map((prod: any) => {
       if (prod.name === productName) {
         prod.quantity += 1;
       }
-    });
+    }));
   };
 
   const decrementProduct = () => {
-    productsArr.map((prod: any) => {
+    setProductsArr(productsArr.map((prod: any) => {
       if (prod.name === productName) {
         prod.quantity -= 1;
       }
-      console.log(prod.quantity);
-    });
+    }));
   };
 
   const removeProduct = () => {
