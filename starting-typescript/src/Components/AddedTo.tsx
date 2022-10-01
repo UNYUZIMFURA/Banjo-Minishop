@@ -15,7 +15,7 @@ const AddedTo: React.FC<Props> = ({
   img,
   quantity,
 }) => {
-  const { productsArr } = useContext(StateContext) as any;
+  const { productsArr, setProductsArr } = useContext(StateContext) as any;
   const incrementProduct = () => {
     productsArr.map((prod: any) => {
       if (prod.name === productName) {
@@ -35,7 +35,10 @@ const AddedTo: React.FC<Props> = ({
   };
 
   const removeProduct = () => {
-    productsArr.filter((el: any) => el.name === productName);
+    console.log("Ikise");
+    return setProductsArr(
+      productsArr.filter((el: any) => el.name !== productName)
+    );
   };
 
   return (
@@ -53,8 +56,8 @@ const AddedTo: React.FC<Props> = ({
           <h1>{productAmt}</h1>
         </div>
       </div>
-      <div className="bg-[red] h-1/2 w-[40%] flex flex-col items-center justify-around">
-        <div className="h-1/2 w-1/2 flex items-center justify-around bg-[blue]">
+      <div className="h-1/2 w-[40%] flex flex-col items-center justify-around">
+        <div className="h-1/2 w-1/2 flex items-center justify-around">
           <button
             className="rounded-full h-1/2 w-[2rem] bg-[white]"
             onClick={decrementProduct}
@@ -72,7 +75,7 @@ const AddedTo: React.FC<Props> = ({
         <h2 className="">Total: {productAmt * quantity} </h2>
       </div>
       <div
-        className="bg-[brown] h-full flex flex-col cursor-pointer items-center justify-center"
+        className="h-full flex flex-col cursor-pointer items-center justify-center"
         onClick={removeProduct}
       >
         <IoCloseCircleOutline size={35} />
