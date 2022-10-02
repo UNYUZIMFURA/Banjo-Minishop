@@ -43,6 +43,7 @@ const AddedTo: React.FC<Props> = ({
   };
 
   const removeProduct = () => {
+    setTotalMoney((prevMoney: number) => (prevMoney -= productAmt * quantity))
     return setProductsArr(
       productsArr.filter((el: any) => el.name !== productName)
     );
