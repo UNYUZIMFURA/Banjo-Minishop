@@ -17,7 +17,6 @@ const SideCart: React.FC = (): any => {
             onClick={() => {
               setOpenVal(false);
             }}
-            className="cursor-pointer"
           >
             <VscChromeClose size={28} />
           </div>
@@ -35,10 +34,10 @@ const SideCart: React.FC = (): any => {
         })}
 <div className="h-[20vh] w-full flex flex-col justify-around items-center mt-[2rem] bg-[#E8E8E8]">
   <div className="w-full flex justify-around">
-  <h1 className="">Total Cost</h1>
-  <h1 className="">{totalMoney}</h1>
+  <h1 className="text-[rgb(99,99,99)]">Total Cost</h1>
+  <h1 className="">${totalMoney}</h1>
   </div>
-  <button className="h-[3rem] w-[70%] text-[#fff] bg-[blue] outline-none cursor-pointer">CHECKOUT</button>
+  <button className="h-[3rem] w-[70%] text-[#fff] bg-[blue] outline-none cursor-pointer rounded-[3px]">CHECKOUT</button>
 </div>
       </div>
     </div>
