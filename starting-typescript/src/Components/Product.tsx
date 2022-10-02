@@ -11,6 +11,7 @@ export interface Props {
 }
 
 const Product: React.FC<Props> = ({ img, amt, name, quantity, addProduct }) => {
+  
   const doubleCall = () => {
     setTotalMoney((prevMoney:number) => prevMoney += amt)
     addProduct({ img, amt, name, quantity })
