@@ -10,7 +10,7 @@ const SideCart: React.FC = (): any => {
   const { totalMoney } = useContext(StateContext) as any;
 
   const toggleBuy = () => {
-    setHasBought(prevBought => !prevBought);
+    setHasBought((prevBought) => !prevBought);
   };
 
   return openVal ? (
@@ -46,10 +46,10 @@ const SideCart: React.FC = (): any => {
             className="h-[3rem] w-[70%] text-[#fff] outline-none cursor-pointer rounded-[3px]"
             onClick={toggleBuy}
             style={{
-              backgroundColor: hasBought? 'green': 'blue'
+              backgroundColor: hasBought ? "green" : "blue",
             }}
           >
-            {hasBought ? 'Success !': 'Checkout'}
+            {hasBought ? "Success !" : "Checkout"}
           </button>
         </div>
       </div>

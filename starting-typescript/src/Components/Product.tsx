@@ -12,13 +12,12 @@ export interface Props {
 }
 
 const Product: React.FC<Props> = ({ img, amt, name, quantity, addProduct }) => {
-  
   const doubleCall = () => {
-    setTotalMoney((prevMoney:number) => prevMoney += amt)
-    addProduct({ img, amt, name, quantity })
-  }
+    setTotalMoney((prevMoney: number) => (prevMoney += amt));
+    addProduct({ img, amt, name, quantity });
+  };
 
-  const { totalMoney, setTotalMoney } = useContext(StateContext) as any;
+  const { setTotalMoney } = useContext(StateContext) as any;
   return (
     <div className="h-[50vh] w-[28%] flex flex-col mt-[1rem]">
       <div className="h-[60%] w-full">
@@ -37,7 +36,9 @@ const Product: React.FC<Props> = ({ img, amt, name, quantity, addProduct }) => {
           className="flex items-center justify-center bg-[blue] text-[#fff] rounded-[3px] h-[3.3rem] w-[80%] cursor-pointer outline-none"
           onClick={() => doubleCall()}
         >
-          <span className="mr-[0.5rem]"><BsCartPlusFill size={22}/></span>
+          <span className="mr-[0.5rem]">
+            <BsCartPlusFill size={22} />
+          </span>
           <span className="ml-[0.5rem] text-[1.1rem]">Add To Cart</span>
         </button>
       </div>
