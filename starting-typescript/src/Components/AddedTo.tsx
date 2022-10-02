@@ -17,7 +17,6 @@ const AddedTo: React.FC<Props> = ({
 }) => {
   const { totalMoney, setTotalMoney } = useContext(StateContext) as any;
   const { productsArr, setProductsArr } = useContext(StateContext) as any;
-  console.log(totalMoney)
   const incrementProduct = () => {
     setProductsArr(
       productsArr.map((prod: any) => {
@@ -27,7 +26,7 @@ const AddedTo: React.FC<Props> = ({
         return prod;
       })
     );
-    setTotalMoney((prevMoney: number) => (prevMoney += productAmt * quantity));
+    setTotalMoney((prevMoney: number) => (prevMoney += productAmt));
   };
 
   const decrementProduct = () => {
@@ -40,7 +39,7 @@ const AddedTo: React.FC<Props> = ({
         return prod;
       })
     );
-    setTotalMoney((prevMoney: number) => (prevMoney -= productAmt * quantity));
+    setTotalMoney((prevMoney: number) => (prevMoney -= productAmt));
   };
 
   const removeProduct = () => {

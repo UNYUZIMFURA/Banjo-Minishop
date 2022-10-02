@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import StateContext from "../helpers/useContext";
 import { Product as ProductInterface } from "./../App";
 
 export interface Props {
@@ -9,6 +11,12 @@ export interface Props {
 }
 
 const Product: React.FC<Props> = ({ img, amt, name, quantity, addProduct }) => {
+  const doubleCall = () => {
+    setTotalMoney((prevMoney:number) => prevMoney += amt)
+    addProduct({ img, amt, name, quantity })
+  }
+
+  const { totalMoney, setTotalMoney } = useContext(StateContext) as any;
   return (
     <div className="h-[50vh] w-[28%] flex flex-col mt-[1rem]">
       <div className="h-[60%] w-full">
@@ -25,7 +33,7 @@ const Product: React.FC<Props> = ({ img, amt, name, quantity, addProduct }) => {
         </div>
         <button
           className="bg-[blue] text-[#fff] rounded-[3px] h-[3.3rem] w-[80%] cursor-pointer outline-none"
-          onClick={() => addProduct({ img, amt, name, quantity })}
+          onClick={() => doubleCall()}
         >
           Add To Cart
         </button>
