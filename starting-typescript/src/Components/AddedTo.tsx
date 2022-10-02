@@ -67,14 +67,14 @@ const AddedTo: React.FC<Props> = ({
       <div className="h-1/2 w-[30%] flex flex-col items-center justify-around ">
         <div className="h-1/2 w-[60%] flex items-center justify-between">
           <button
-            className="bg-[blue] rounded-full h-1/2 w-[2rem] bg-[white]"
+            className="bg-[black] rounded-full h-1/2 w-[2rem] text-[white]"
             onClick={decrementProduct}
           >
             -
           </button>
           <h1 className="">{quantity}</h1>
           <button
-            className="bg-[blue] rounded-full h-1/2 w-[2rem] bg-[white]"
+            className="bg-[black] rounded-full h-1/2 w-[2rem] text-[white]"
             onClick={incrementProduct}
           >
             +

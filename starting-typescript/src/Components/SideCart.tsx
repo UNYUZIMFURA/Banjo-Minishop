@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { VscChromeClose } from "react-icons/vsc";
+import { IoCloseCircleOutline } from "react-icons/io5";
 import AddedTo from "./AddedTo";
 import StateContext from "../helpers/useContext";
 
@@ -18,7 +18,7 @@ const SideCart: React.FC = (): any => {
               setOpenVal(false);
             }}
           >
-            <VscChromeClose size={28} />
+        <IoCloseCircleOutline size={40} />
           </div>
         </div>
         {productsArr.map((singleProduct: any) => {
