@@ -4,9 +4,14 @@ import AddedTo from "./AddedTo";
 import StateContext from "../helpers/useContext";
 
 const SideCart: React.FC = (): any => {
+  const [hasBought, setHasBought] = useState(false);
   const { openVal, setOpenVal } = useContext(StateContext) as any;
   const { productsArr } = useContext(StateContext) as any;
   const { totalMoney } = useContext(StateContext) as any;
+
+  const toggleBuy = () => {
+    setHasBought(prevBought => !prevBought);
+  };
 
   return openVal ? (
     <div className="absolute w-full h-[115vh] bg-[rgba(0,0,0,0.5)] ">
@@ -18,7 +23,7 @@ const SideCart: React.FC = (): any => {
               setOpenVal(false);
             }}
           >
-        <IoCloseCircleOutline size={40} />
+            <IoCloseCircleOutline size={40} />
           </div>
         </div>
         {productsArr.map((singleProduct: any) => {
@@ -32,13 +37,21 @@ const SideCart: React.FC = (): any => {
             />
           );
         })}
-<div className="h-[20vh] w-full flex flex-col justify-around items-center mt-[2rem] bg-[#E8E8E8]">
-  <div className="w-full flex justify-around">
-  <h1 className="text-[rgb(99,99,99)]">Total Cost</h1>
-  <h1 className="">${totalMoney}</h1>
-  </div>
-  <button className="h-[3rem] w-[70%] text-[#fff] bg-[blue] outline-none cursor-pointer rounded-[3px]">CHECKOUT</button>
-</div>
+        <div className="h-[20vh] w-full flex flex-col justify-around items-center mt-[2rem] bg-[#E8E8E8]">
+          <div className="w-full flex justify-around">
+            <h1 className="text-[rgb(99,99,99)]">Total Cost</h1>
+            <h1 className="">${totalMoney}</h1>
+          </div>
+          <button
+            className="h-[3rem] w-[70%] text-[#fff] outline-none cursor-pointer rounded-[3px]"
+            onClick={toggleBuy}
+            style={{
+              backgroundColor: hasBought? 'green': 'blue'
+            }}
+          >
+            {hasBought ? 'Success !': 'Checkout'}
+          </button>
+        </div>
       </div>
     </div>
   ) : (
