@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import StateContext from "../helpers/useContext";
+import { BsCartPlusFill } from "react-icons/bs";
 import { Product as ProductInterface } from "./../App";
 
 export interface Props {
@@ -33,10 +34,11 @@ const Product: React.FC<Props> = ({ img, amt, name, quantity, addProduct }) => {
           <h1 className="text-[1.1rem] text-[#737373]">${amt}</h1>
         </div>
         <button
-          className="bg-[blue] text-[#fff] rounded-[3px] h-[3.3rem] w-[80%] cursor-pointer outline-none"
+          className="flex items-center justify-center bg-[blue] text-[#fff] rounded-[3px] h-[3.3rem] w-[80%] cursor-pointer outline-none"
           onClick={() => doubleCall()}
         >
-          Add To Cart
+          <span className="mr-[0.5rem]"><BsCartPlusFill size={22}/></span>
+          <span className="ml-[0.5rem] text-[1.1rem]">Add To Cart</span>
         </button>
       </div>
     </div>

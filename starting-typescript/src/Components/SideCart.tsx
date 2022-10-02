@@ -11,7 +11,7 @@ const SideCart: React.FC = (): any => {
   return openVal ? (
     <div className="absolute w-full h-[115vh] bg-[rgba(0,0,0,0.5)] ">
       <div className="bg-[white] flex-col justify-between items-center absolute right-0 overflow-y-scroll h-full w-[31%]">
-        <div className="flex items-center h-[10vh] flex justify-around w-full">
+        <div className="flex items-center h-[10vh] flex justify-around w-full cursor-pointer">
           <h1 className="text-[1.3rem]">Inside Cart</h1>
           <div
             onClick={() => {
