@@ -20,7 +20,6 @@ const SideCart: React.FC = (): any => {
             className="cursor-pointer"
           >
             <VscChromeClose size={28} />
-            <h1>{totalMoney}</h1>
           </div>
         </div>
         {productsArr.map((singleProduct: any) => {
@@ -34,6 +33,13 @@ const SideCart: React.FC = (): any => {
             />
           );
         })}
+<div className="h-[20vh] w-full flex flex-col justify-around items-center mt-[2rem] bg-[#E8E8E8]">
+  <div className="w-full flex justify-around">
+  <h1 className="">Total Cost</h1>
+  <h1 className="">{totalMoney}</h1>
+  </div>
+  <button className="h-[3rem] w-[70%] text-[#fff] bg-[blue] outline-none cursor-pointer">CHECKOUT</button>
+</div>
       </div>
     </div>
   ) : (

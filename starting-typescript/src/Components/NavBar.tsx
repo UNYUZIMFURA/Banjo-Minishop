@@ -7,8 +7,25 @@ const NavBar: React.FC = () => {
   const { productsArr } = useContext(StateContext) as any;
 
   return (
-    <div className="relative flex justify-center items-center h-[10vh] w-full">
-      <h1 className="text-[2rem] font-medium">Typescript Cart</h1>
+    <div className="h-[10vh] w-full relative flex justify-center items-center bg-[#111]">
+      <h1 className="flex text-[2rem] text-[white] font-medium">
+        <span>E</span>
+        <span>X</span>
+        <span>P</span>
+        <span>L</span>
+        <span>O</span>
+        <span>R</span>
+        <span>E</span>
+        <span className="ml-[1rem] ">P</span>
+        <span>R</span>
+        <span>O</span>
+        <span>D</span>
+        <span>U</span>
+        <span>C</span>
+        <span>T</span>
+        <span>S</span>
+        
+      </h1>
       <span className="cursor-pointer absolute right-[8%]">
         <div
           onClick={() => {
