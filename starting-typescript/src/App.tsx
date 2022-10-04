@@ -57,9 +57,9 @@ const App: React.FC = () => {
         <div className="flex justify-around flex-wrap w-[90%] mt-[3rem]">
           <Product
             addProduct={addProduct}
-            img={Headphones}
-            amt={120}
-            name="Headphones"
+            img={Camera}
+            amt={1500}
+            name="Camera"
             quantity={1}
           />
           <Product
@@ -72,7 +72,7 @@ const App: React.FC = () => {
           <Product
             addProduct={addProduct}
             img={RangeRover}
-            amt={7000}
+            amt={70000}
             name="Range Rover"
             quantity={1}
           />
@@ -92,9 +92,9 @@ const App: React.FC = () => {
           />
           <Product
             addProduct={addProduct}
-            img={Camera}
-            amt={3000}
-            name="Camera"
+            img={Headphones}
+            amt={120}
+            name="Headphones"
             quantity={1}
           />
         </div>
