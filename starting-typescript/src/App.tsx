@@ -2,10 +2,10 @@ import React from "react";
 import { useState } from "react";
 import Product from "./Components/Product";
 import NavBar from "./Components/NavBar";
-import Piano from "./Images/piano.jpg";
+import Camera from "./Images/camera.jpg";
 import Mitziig from "./Images/mitziig.jpg";
 import Headphones from "./Images/headphones.jpg";
-import Volkswagen from "./Images/volkswagen.jpg";
+import RangeRover from "./Images/range-rover.jpg";
 import Macbook from "./Images/macbook.jpg";
 import Mercedez from "./Images/mercedez.jpg";
 import SideCart from "./Components/SideCart";
@@ -71,9 +71,9 @@ const App: React.FC = () => {
           />
           <Product
             addProduct={addProduct}
-            img={Volkswagen}
+            img={RangeRover}
             amt={7000}
-            name="Volkswagen"
+            name="Range Rover"
             quantity={1}
           />
           <Product
@@ -92,9 +92,9 @@ const App: React.FC = () => {
           />
           <Product
             addProduct={addProduct}
-            img={Piano}
+            img={Camera}
             amt={3000}
-            name="Piano"
+            name="Camera"
             quantity={1}
           />
         </div>
