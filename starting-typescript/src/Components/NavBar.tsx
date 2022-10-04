@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { BsCartPlusFill } from "react-icons/bs";
 import StateContext from "../helpers/useContext";
 
+{/* Small change to push */}
 const NavBar: React.FC = () => {
   const { setOpenVal } = useContext(StateContext) as any;
   const { productsArr } = useContext(StateContext) as any;
